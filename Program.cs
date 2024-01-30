@@ -53,14 +53,9 @@ var selectedFirmsArray = from t in firmsArray
                          select t;
 foreach (var firm in selectedFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
+
 //через методи розширення Linq
 Console.WriteLine("***********************************");
 Console.WriteLine("Запит через методи розширення Linq для отримання інформаціїї про всі фірми");
@@ -68,13 +63,7 @@ Console.WriteLine("***********************************");
 var selectedFirmsArray2 = firmsArray.Select(firm => firm);
 foreach (var firm in selectedFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 
 // Отримати фірми, які мають у назві слово «Food».
@@ -87,13 +76,7 @@ var FoodFirmsArray = from t in firmsArray
                          select t;
 foreach (var firm in FoodFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 //через методи розширення Linq
 Console.WriteLine("***********************************");
@@ -103,13 +86,7 @@ var FoodFirmsArray2 = firmsArray.Where
     (t => t.NameFirm.Contains("Food"));
 foreach (var firm in FoodFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 
 // Отримати фірми, які працюють у галузі маркетингу.
@@ -122,13 +99,7 @@ var MarkFirmsArray = from t in firmsArray
                      select t;
 foreach (var firm in MarkFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 //через методи розширення Linq
 Console.WriteLine("***********************************");
@@ -138,13 +109,7 @@ var MarkFirmsArray2 = firmsArray.Where
     (t => t.BusinessProfile.Contains("Маркетинг"));
 foreach (var firm in MarkFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 // Отримати фірми, які працюють у галузі маркетингу або IT.
 //через Linq
@@ -156,13 +121,7 @@ var MarkITFirmsArray = from t in firmsArray
                      select t;
 foreach (var firm in MarkITFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 //через методи розширення Linq
 Console.WriteLine("***********************************");
@@ -172,13 +131,7 @@ var MarkITFirmsArray2 = firmsArray.Where
     (t => t.BusinessProfile.Contains("Маркетинг") || t.BusinessProfile.Contains("IT"));
 foreach (var firm in MarkITFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 
 // Отримати фірми з кількістю працівників більшою, ніж 100.
@@ -192,13 +145,7 @@ var CountFirmsArray = from t in firmsArray
                        select t;
 foreach (var firm in CountFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 //через методи розширення Linq
 Console.WriteLine("***********************************");
@@ -208,13 +155,7 @@ var CountFirmsArray2 = firmsArray.Where
     (t => t.NumberEmployees > 100).OrderBy(t=>t);
 foreach (var firm in CountFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 
 // Отримати фірми з кількістю працівників у діапазоні від 100 до 300.
@@ -228,13 +169,7 @@ var Count_FirmsArray = from t in firmsArray
                       select t;
 foreach (var firm in Count_FirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 
 //через методи розширення Linq
@@ -245,13 +180,7 @@ var Count_FirmsArray2 = firmsArray.Where
     (t => t.NumberEmployees >= 100 && t.NumberEmployees <= 300).OrderBy(t => t);
 foreach (var firm in Count_FirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 
 // Отримати фірми, які знаходяться в Лондоні.
@@ -264,13 +193,7 @@ var AdressFirmsArray = from t in firmsArray
                        select t;
 foreach (var firm in AdressFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 //через методи розширення Linq
 Console.WriteLine("***********************************");
@@ -280,13 +203,7 @@ var AdressFirmsArray2 = firmsArray.Where
     (t => t.Address.Contains("Лондон"));
 foreach (var firm in AdressFirmsArray2)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 
 // Отримати фірми, в яких прізвище директора Вайт.
@@ -299,13 +216,7 @@ var NameFirmsArray = from t in firmsArray
                        select t;
 foreach (var firm in NameFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 //через методи розширення Linq
 Console.WriteLine("***********************************");
@@ -315,13 +226,7 @@ var NameFirmsArray2 = firmsArray.Where
     (t => t.FullNameDirector.Contains("Вайт"));
 foreach (var firm in NameFirmsArray2)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 
 // Отримати фірми, які засновані більше двох років тому.
@@ -336,13 +241,7 @@ var DateFirmsArray = from t in firmsArray
                      select t;
 foreach (var firm in DateFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 //через методи розширення Linq
 Console.WriteLine("***********************************");
@@ -352,13 +251,7 @@ var DateFirmsArray2 = firmsArray.Where
     (t => (currentDate - DateTime.Parse(t.DateEstablishment)).TotalDays > 365 * 2);
 foreach (var firm in DateFirmsArray2)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 
 // Отримати фірми з дня заснування яких минуло 123 дні.
@@ -371,13 +264,7 @@ var DateFirmsArray123 = from t in firmsArray
                      select t;
 foreach (var firm in DateFirmsArray123)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 //через методи розширення Linq
 Console.WriteLine("***********************************");
@@ -387,13 +274,7 @@ var Date2FirmsArray123 = firmsArray.Where
     (t => (currentDate - DateTime.Parse(t.DateEstablishment)).TotalDays > 123);
 foreach (var firm in Date2FirmsArray123)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 
 // Отримати фірми, в яких прізвище директора Блек і мають у назві фірми слово «White».
@@ -406,13 +287,7 @@ var WFirmsArray = from t in firmsArray
                         select t;
 foreach (var firm in WFirmsArray)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }
 //через методи розширення Linq
 Console.WriteLine("***********************************");
@@ -422,11 +297,5 @@ var WFirmsArray2 = firmsArray.Where
     (t => t.FullNameDirector.Contains("Блек") && t.NameFirm.Contains("White"));
 foreach (var firm in WFirmsArray2)
 {
-    Console.WriteLine("Назва фірми: " + firm.NameFirm);
-    Console.WriteLine("Дата заснування: " + firm.DateEstablishment);
-    Console.WriteLine("Бізнес-профіль: " + firm.BusinessProfile);
-    Console.WriteLine("Повне ім'я директора: " + firm.FullNameDirector);
-    Console.WriteLine("Кількість співробітників: " + firm.NumberEmployees);
-    Console.WriteLine("Адреса: " + firm.Address);
-    Console.WriteLine("-----------------------------------");
+    Console.WriteLine(firm.ToString());
 }

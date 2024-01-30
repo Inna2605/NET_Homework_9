@@ -37,5 +37,16 @@ namespace NET_Homework_9
         {
             firms = new List<Firm>();
         }
+
+        public override string ToString()
+        {
+            return $"Назва фірми: {NameFirm}\n" +
+                   $"Дата заснування: {DateEstablishment}\n" +
+                   $"Бізнес-профіль: {BusinessProfile}\n" +
+                   $"Повне ім'я директора: {FullNameDirector}\n" +
+                   $"Кількість співробітників: {NumberEmployees}\n" +
+                   $"Адреса: {Address}\n" +
+                   "-----------------------------------";
+        }
     }
 }
